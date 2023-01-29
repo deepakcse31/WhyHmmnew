@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.AboutWhyFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/tvnotext"
+        android:text="Why Whyhmm App??" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvnotext"
+        app:layout_constraintStart_toStartOf="@+id/tvnotext"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/suggsetiontextcolor"
+        android:fontFamily="@font/nunitoregular"
+        android:textSize="14dp"
+        android:id="@+id/tvdummy"
+        android:text="Find the tag to select below"
+        />
+
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/know_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:chipSpacingHorizontal="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdummy"
+        app:selectionRequired="true"
+        android:checkable="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            style="@style/Mychip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/social_media"
+            android:textSize="14sp"
+            app:chipCornerRadius="8dp"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="35dp"
+            app:chipStartPadding="16dp"
+            app:chipStrokeColor="@color/blackshade_200"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            style="@style/Mychip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/friends_family"
+            android:textSize="14sp"
+            app:chipCornerRadius="8dp"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="35dp"
+            app:chipStartPadding="16dp"
+            app:chipStrokeColor="@color/blackshade_200"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            style="@style/Mychip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/browsing_internet"
+            android:textSize="14sp"
+            app:chipCornerRadius="8dp"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="35dp"
+            app:chipStartPadding="16dp"
+            app:chipStrokeColor="@color/blackshade_200"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            style="@style/Mychip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/app_subscriber"
+            android:textSize="14sp"
+            app:chipCornerRadius="8dp"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="35dp"
+            app:chipStartPadding="16dp"
+            app:chipStrokeColor="@color/blackshade_200"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            style="@style/Mychip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/others"
+            android:textSize="14sp"
+            app:chipCornerRadius="8dp"
+            app:chipEndPadding="16dp"
+            app:chipMinHeight="35dp"
+            app:chipStartPadding="16dp"
+            app:chipStrokeColor="@color/blackshade_200"
+            app:chipStrokeWidth="1dp" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        style="@style/loginbutton"
+        android:layout_marginHorizontal="30dp"
+        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
+        android:text="Continue"
+        app:icon="@drawable/ic_arrow_icon"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/black"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:background="@drawable/button_inactive"
+        android:id="@+id/btnsubmit"
+        android:layout_marginBottom="40dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

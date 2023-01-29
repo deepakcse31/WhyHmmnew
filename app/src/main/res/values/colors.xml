@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Purple_main">#856EE1</color>
+    <color name="PurpleDarkExtra">#37298A</color>
+    <color name="Purple_100">#6C52D0</color>
+    <color name="Purple_200">#856EE1</color>
+    <color name="Purple_300">#9985E8</color>
+    <color name="Purple_400">#A292E1</color>
+    <color name="Purple_500">#B8A8F9</color>
+    <color name="Purple_600">#D0C5FF</color>
+    <color name="Purple_700">#F4F1FF</color>
+    <color name="Purple_800">#E1E6FF</color>
+    <color name="purpleMainLogin">#A392FF</color>
+    <color name="purleExtra">#FF8875FF</color>
+    <color name="purple_training">#585CE5</color>
+    <color name="purletraining2">#777AF3</color>
+
+    <!--Yellow Secondary Color Main-->
+    <color name="yellow_main">#FFCC3E</color>
+    <color name="yellow_100">#FFC011</color>
+    <color name="yellow_200">#FFCC3E</color>
+    <color name="yellow_300">#FFD766</color>
+    <color name="yellow_400">#FFDD7E</color>
+    <color name="yellow_500">#FFE396</color>
+    <color name="yellow_600">#FFEBB2</color>
+    <color name="yellow_700">#FFF6DE</color>
+    <color name="yellow_800">#FEE8AB</color>
+    <color name="walkthrough1">#FFFDEA</color>
+    <color name="walkthrough2">#FFEDE7</color>
+    <color name="walkthrough3">#EDEAFF</color>
+
+
+    <!--Orange Third Color Main-->
+    <color name="orange_dark">#B94D4D</color>
+    <color name="orange_main">#FF7254</color>
+    <color name="orange_100">#FF7254</color>
+    <color name="orange_200">#FF876D</color>
+    <color name="orange_300">#FF9B86</color>
+    <color name="orange_400">#FFC3B6</color>
+    <color name="orange_500">#FFD7CE</color>
+    <color name="orange_600">#FFEEEF</color>
+
+
+    <!--Green fourth Color Main-->
+    <color name="green_main">#BFE28E</color>
+    <color name="green_100">#ADDA6F</color>
+    <color name="green_200">#BFE28E</color>
+    <color name="green_300">#CBE9A1</color>
+    <color name="green_400">#DCFAB2</color>
+    <color name="green_500">#E6FCC7</color>
+    <color name="green_600">#ECFFD0</color>
+    <color name="green_700">#F5FFE7</color>
+    <color name="green_dark">#6D9734</color>
+    <color name="green_stepper">#94CA4A</color>
+
+    <!--Grey Fourth Color Main-->
+    <color name="blackshade_main">#333333</color>
+    <color name="blackshade_100">#4F4F4F</color>
+    <color name="blackshade_200">#828282</color>
+    <color name="blackshade_300">#BDBDBD</color>
+    <color name="blackshade_400">#E0E0E0</color>
+    <color name="blackshade_500">#F1F1F1</color>
+    <color name="blackshade_600">#FAFAFA</color>
+    <color name="blackshade_110">#A5A5A5</color>
+    <color name="blackshade_700">#FCFBFF</color>
+
+    <!--Extra color-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="purpledark">#000000</color>
+    <color name="signaturebackgroundcolor">#FCFBFF</color>
+    <color name="attendence">#B2CCFF</color>
+    <color name="mypriject">#FFCD95</color>
+    <color name ="btn_blue">#7A64FF</color>
+    <color name ="dark_blue_extra">#22398C</color>
+    <color name="yellowExtra">#FFF8E4</color>
+    <color name="myProjectExtra">#CB9150</color>
+    <color name="snackaction">#F9D919</color>
+    <color name="lightblue">#627DE0</color>
+    <color name="bluecolordatak">#352A75</color>
+    <color name="green">#9CCD62</color>
+    <color name="black_75">#BF3A3C42</color>
+    <color name="transparent">#00000000</color>
+    <color name="lightskyblue">#F1EFFF</color>
+    <color name="bronze">#915F3C</color>
+    <color name="gold">#BBA20D</color>
+    <color name="silver">#ABABAA</color>
+
+
+    <color name="splash">#FFFF00</color>
+    <color name="secondarycolor">#00B2E9</color>
+    <color name="suggsetiontextcolor">#999999</color>
+
+    <color name="redcolor">#D73737</color>
+    <color name="buttoninactive">#ECF0F3</color>
+    <color name="linecolor">#ECF0F3</color>
+</resources>

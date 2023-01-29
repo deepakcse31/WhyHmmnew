@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">WhyHmm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_option_to_upload_documents">Choose option to upload documents</string>
+    <string name="best_modules_by_n_professional_mentors">Best Modules by\nProfessional Mentors</string>
+    <string name="skip">Skip</string>
+    <string name="be_better_with_the_nengaged_community">Be better with the \nEngaged Community</string>
+    <string name="find_your_courses_ninsights_with_tags"><![CDATA[Find your Courses &\nInsights with tags]]></string>
+    <string name="give_us_your_mobile_number">Give us your mobile Number</string>
+    <string name="to_onboard_we_need_your_mobile_number_nlinked_to_the_whatsapp">To onboard we need your mobile number \nlinked to the whatsapp</string>
+    <string name="we_have_sent_you_an_otp">We have sent you an OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="you_didn_t_receive_code">You Didn’t receive code ? </string>
+    <string name="resend_code"><u>Resend Code</u></string>
+    <string name="by_clicking_the_option_your_indication_that_you_nhave_agreed_to_all_policies_in_tems_conditions"><![CDATA[by clicking the option your indication that you \nhave agreed to all Policies in tems & Conditions]]></string>
+    <string name="to_onboard_we_need_your_name_to_create_nyour_profile">To onboard we need your Name to create \nyour profile</string>
+    <string name="find_the_tag_to_select_below">Find the tag to select below</string>
+    <string name="social_media">Social Media</string>
+    <string name="friends_family"><![CDATA[Friends & family]]></string>
+    <string name="browsing_internet">Browsing Internet</string>
+    <string name="app_subscriber">App Subscriber</string>
+    <string name="others">Others</string>
+    <string name="what_is_whyhmm">What is WhyHmm ?</string>
+    <string name="popolar_in_marketing">Popolar in Marketing</string>
+    <string name="handpicked_series">Handpicked Series</string>
+    <string name="our_experienced_gurus">Our Experienced Gurus</string>
+    <string name="find_your_best_mentor">Find your best mentor</string>
+</resources>

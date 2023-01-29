@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".presentation.fragment.OtpFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/tvnotext"
+        android:text="@string/we_have_sent_you_an_otp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvnotext"
+        app:layout_constraintStart_toStartOf="@+id/tvnotext"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/suggsetiontextcolor"
+        android:fontFamily="@font/nunitoregular"
+        android:textSize="14dp"
+        android:id="@+id/tvdummy"
+        android:text="Enter the 4 digit OTP \nto proceed"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/layotp"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdummy"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_otp_background"
+                android:fontFamily="@font/nunitobold"
+                android:gravity="center"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:maxLength="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_otp_background"
+                android:fontFamily="@font/nunitobold"
+                android:gravity="center"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:maxLength="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_otp_background"
+                android:fontFamily="@font/nunitobold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:maxLength="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_otp_background"
+                android:fontFamily="@font/nunitobold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:maxLength="1" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/layotp"
+        android:layout_marginTop="50dp"
+        style="@style/loginbutton"
+        android:layout_marginHorizontal="30dp"
+        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
+        android:text="@string/enter_otp"
+        app:icon="@drawable/ic_arrow_icon"
+        app:iconGravity="textEnd"
+        android:textAllCaps="false"
+        android:background="@drawable/button_gradient"
+        android:id="@+id/btnsubmit"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/btnsubmit"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_didn_t_receive_code"
+            android:fontFamily="@font/nunitoregular"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_code"
+            android:fontFamily="@font/nunitobold"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="25dp"
+        android:translationZ="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="35dp"
+            >
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you agree to allow the WhyHmm App \nto check your information."
+                android:fontFamily="@font/nunitobold"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitoregular"
+                android:textColor="@color/suggsetiontextcolor"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/by_clicking_the_option_your_indication_that_you_nhave_agreed_to_all_policies_in_tems_conditions"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

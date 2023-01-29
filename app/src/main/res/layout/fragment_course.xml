@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.CourseFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        tools:visibility = "visible"
+        android:id="@+id/main_lay"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rvcourse"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/popolar_in_marketing"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/tvpopular"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvcourse"
+        android:orientation="horizontal"
+        tools:listitem="@layout/course_item"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvpopular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvpopular"
+        android:orientation="horizontal"
+        app:reverseLayout="true"
+        tools:listitem="@layout/course_item"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rvpopular"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/handpicked_series"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/tvhandicaped"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvhandicaped"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rvhandicaped"
+        android:orientation="horizontal"
+        app:reverseLayout="true"
+        tools:listitem="@layout/handicaped_item"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rvhandicaped"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/our_experienced_gurus"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/tvexperience"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvexperience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/experties_background"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="@string/find_your_best_mentor"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:id="@+id/tvyourbestmember"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvyourbestmember"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/rvexperience"
+            android:orientation="horizontal"
+            app:reverseLayout="true"
+            tools:listitem="@layout/handicaped_item"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/homefragment"
+        android:title="Home"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/home"/>
+
+    <item android:id="@+id/coursesfragment"
+        android:title="Courses"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/course_icon"/>
+
+    <item android:id="@+id/activityfragment"
+        android:title="Activity"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/activity_icon"/>
+
+    <item android:id="@+id/walletfragment"
+        android:title="Wallet"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/wallet_icon"/>
+
+    <item android:id="@+id/supportfragment"
+        android:title="Support"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/support_icon"/>
+</menu>
