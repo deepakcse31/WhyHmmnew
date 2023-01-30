@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="8dp"
+    android:id="@+id/swipeRefresh"
     tools:context=".presentation.fragment.CoursesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/layprofile"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_profilenew"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="15dp"
+                android:src="@color/suggsetiontextcolor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:strokeColor="@color/black"
+                android:scaleType="centerCrop"
+                app:strokeWidth="1dp"
+                android:padding="3dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
-</FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_profilenew"
+                app:layout_constraintTop_toTopOf="@+id/iv_profilenew"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profilenew"
+                android:background="@drawable/notification_background"
+                android:layout_marginHorizontal="10dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notification_icon_"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="3"
+                    android:textSize="7dp"
+                    android:textColor="@color/white"
+                    android:padding="2sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:fontFamily="@font/nunitoregular"
+
+
+
+                    android:background="@drawable/notification_text_background"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layprofile"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/my_courses"
+            android:fontFamily="@font/nunitobold"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:id="@+id/tvheading"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvheading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/rvcourses"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -26,4 +26,8 @@
     <string name="handpicked_series">Handpicked Series</string>
     <string name="our_experienced_gurus">Our Experienced Gurus</string>
     <string name="find_your_best_mentor">Find your best mentor</string>
+    <string name="personal_marketing_ndevelopment">Personal Marketing \nDevelopment</string>
+    <string name="marketing_is_a_fast_evolving_industry_to_keep_up_you_need_to_know_the_latest_terms_and_definitions_thats_why_we_ve_put_together_a_read_more">Marketing is a fast-evolving industry.to keep up, you need to know the latest terms and definitions. Thats why we’ve put together a....... Read More</string>
+    <string name="your_mentors"><u>Your mentors</u></string>
+    <string name="my_courses"><u>My Courses</u></string>
 </resources>
