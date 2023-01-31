@@ -1,6 +1,7 @@
 package com.example.whyhmm.presentation.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import com.example.whyhmm.domain.adapter.CourseAdapter
 import com.example.whyhmm.domain.adapter.HomeMentorAdapter
 import com.example.whyhmm.domain.adapter.MyCoursesAdapter
 import com.example.whyhmm.domain.utils.show
+import com.example.whyhmm.domain.utils.superNavigate
 import com.example.whyhmm.presentation.fragment.basefragment.BaseFragment
 import com.example.whyhmm.presentation.fragment.viewmodel.CoursesViewmodel
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,6 +34,12 @@ class CoursesFragment : BaseFragment<FragmentCoursesBinding,CoursesViewmodel>() 
             rvcourses.layoutManager= gridLayoutManager
             rvcourses.adapter=adaptercourses
             rvcourses.show()
+        }
+        binding.rvcourses.setOnClickListener {
+
+            Log.e("Clicked","Clicked"+"Clicked")
+            val action=CoursesFragmentDirections.actionCoursefragmentToCoursesdetailsfragment()
+            superNavigate(action)
         }
     }
 }

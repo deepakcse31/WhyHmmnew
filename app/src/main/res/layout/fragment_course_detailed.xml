@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:visibility="visible"
+    android:visibility="invisible"
+    android:id="@+id/main_lay"
+    tools:context=".presentation.fragment.CourseDetailedFragment">
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/player_exo"
+        app:show_buffering="when_playing"
+        app:show_subtitle_button="true"
+        app:show_fastforward_button="true"
+        app:show_rewind_button="true"
+        app:resize_mode="fit"
+        app:show_next_button="false"
+        app:show_previous_button="false"
+        app:use_artwork="true"
+        app:played_color="@color/secondarycolor"
+        app:unplayed_color="#515151"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:use_controller="true" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/full_screen_open"
+        app:layout_constraintBottom_toBottomOf="@+id/player_exo"
+        app:layout_constraintEnd_toEndOf="@+id/player_exo"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/ivexpand"
+        />
+
+
+    <ImageView
+        android:id="@+id/exo_quality"
+        android:layout_width="35dp"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="@+id/player_exo"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_exo"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:text="Marketing"
+                android:textColor="@color/greenmarketin"
+                android:fontFamily="@font/nunitoregular"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/tvheaing"
+                android:layout_marginTop="10dp"
+                />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/ivshare"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/like_"
+        app:layout_constraintEnd_toStartOf="@+id/ivshare"
+        app:layout_constraintTop_toTopOf="@+id/ivshare"
+        app:layout_constraintBottom_toBottomOf="@+id/ivshare"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvheaing"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/tvheaing"
+        android:text="@string/personal_marketing_ndevelopment"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:id="@+id/headingsecond"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/headingsecond"
+        app:layout_constraintStart_toStartOf="@+id/headingsecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/suggsetiontextcolor"
+        android:fontFamily="@font/nunitoregular"
+        android:textSize="12dp"
+        android:text="Marketing is a fast-evolving industry.to keep up,
+you need to know the latest terms and definitions. Thats why we’ve put together a.......
+Read More"
+        />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

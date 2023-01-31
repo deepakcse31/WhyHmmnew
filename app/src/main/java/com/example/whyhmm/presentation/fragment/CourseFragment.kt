@@ -1,6 +1,7 @@
 package com.example.whyhmm.presentation.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import com.example.whyhmm.domain.adapter.HandicapedAdapter
 import com.example.whyhmm.domain.adapter.MentorAdapter
 import com.example.whyhmm.domain.adapter.PopularmarketingAdapter
 import com.example.whyhmm.domain.utils.show
+import com.example.whyhmm.domain.utils.superNavigate
 import com.example.whyhmm.presentation.fragment.basefragment.BaseFragment
 import com.example.whyhmm.presentation.fragment.viewmodel.CourseViewmodel
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,6 +49,13 @@ class CourseFragment : BaseFragment<FragmentCourseBinding,CourseViewmodel>() {
             rvhandicaped.layoutManager= LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             rvhandicaped.adapter=adapterhandipicked
             rvhandicaped.show()
+
+
+        }
+        binding.tvpopular.setOnClickListener {
+            Log.e("Clicked","Clicked"+"Clicked")
+            val action=CourseFragmentDirections.actionCoursefragmentToCoursesdetailsfragment()
+            superNavigate(action)
         }
     }
 }

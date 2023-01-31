@@ -71,6 +71,12 @@ dependencies {
 
     //autoimageslider
     implementation 'com.github.IslamKhSh:CardSlider:1.0.0'
+    //videoplayer
 
+    implementation 'com.google.android.exoplayer:exoplayer:2.16.1'
+    //full screen
+    implementation 'com.github.norulab:android-exoplayer-fullscreen:1.2.1'
+    //youtube video play
+    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
 
 }
