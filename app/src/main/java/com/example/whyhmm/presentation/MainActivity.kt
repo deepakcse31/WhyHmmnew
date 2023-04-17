@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 when (destination.id) {
                     R.id.homefragment->showBottomNavigation()
                     R.id.coursesfragment->showBottomNavigation()
-                    R.id.activityfragment->showBottomNavigation()
+                    R.id.gamesactivityFragment->showBottomNavigation()
                     R.id.walletfragment->showBottomNavigation()
                     R.id.supportfragment->showBottomNavigation()
                     else -> {

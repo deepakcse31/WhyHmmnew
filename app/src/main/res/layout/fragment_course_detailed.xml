@@ -29,6 +29,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:use_controller="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/player_exo"
+        app:layout_constraintStart_toStartOf="@+id/player_exo"
+        android:src="@drawable/back_video"
+        android:layout_marginStart="10dp"
+        android:visibility="invisible"
+        />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -128,10 +137,144 @@
         android:textColor="@color/suggsetiontextcolor"
         android:fontFamily="@font/nunitoregular"
         android:textSize="12dp"
+        android:id="@+id/tvdetails"
         android:text="Marketing is a fast-evolving industry.to keep up,
 you need to know the latest terms and definitions. Thats why we’ve put together a.......
 Read More"
         />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvtags"
+                tools:listitem="@layout/tags_item"
+                app:layout_constraintTop_toBottomOf="@+id/tvdetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rvtags"
+                app:layout_constraintStart_toStartOf="@+id/rvtags"
+                android:src="@drawable/circle"
+                android:layout_marginTop="15dp"
+                android:id="@+id/ivone"
+                android:layout_marginStart="12dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/ivone"
+                app:layout_constraintBottom_toBottomOf="@+id/ivone"
+                android:src="@drawable/circle"
+                app:layout_constraintStart_toStartOf="@+id/ivone"
+                android:layout_marginStart="15dp"
+                android:id="@+id/ivtwo"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/ivone"
+                app:layout_constraintBottom_toBottomOf="@+id/ivone"
+                android:src="@drawable/circle"
+                app:layout_constraintStart_toStartOf="@+id/ivone"
+                android:layout_marginStart="25dp"
+                android:id="@+id/ivthree"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/ivthree"
+                app:layout_constraintStart_toEndOf="@+id/ivthree"
+                android:layout_marginStart="10dp"
+                android:text="@string/your_mentors"
+                android:textColor="@color/redcolor"
+                android:fontFamily="@font/nunitoregular"
+                android:textSize="14dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/ivone"
+                android:layout_marginTop="10dp"
+                style="@style/loginbutton"
+                android:layout_marginHorizontal="30dp"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@null"
+                android:text="Play Video"
+                app:icon="@drawable/playbutton"
+                app:iconGravity="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_gradient"
+                android:id="@+id/btnplay"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnplay"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"
+                android:text="@string/what_you_ll_learn"
+                android:fontFamily="@font/nunitobold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tvlearn"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvlearn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/rvlearn"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rvlearn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"
+                android:text="Episode - 01"
+                android:fontFamily="@font/nunitobold"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:id="@+id/tvepisode"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marketing"
+                app:layout_constraintTop_toBottomOf="@+id/tvepisode"
+                app:layout_constraintStart_toStartOf="@+id/tvepisode"
+                android:fontFamily="@font/nunitosemibold"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvmarketing"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvmarketing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/rvmarketing"
+
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

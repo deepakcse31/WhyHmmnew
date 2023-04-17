@@ -2,16 +2,12 @@ package com.example.whyhmm.presentation.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.whyhmm.R
 import com.example.whyhmm.databinding.FragmentCoursesBinding
-import com.example.whyhmm.domain.adapter.CourseAdapter
-import com.example.whyhmm.domain.adapter.HomeMentorAdapter
 import com.example.whyhmm.domain.adapter.MyCoursesAdapter
 import com.example.whyhmm.domain.utils.show
 import com.example.whyhmm.domain.utils.superNavigate
@@ -35,10 +31,14 @@ class CoursesFragment : BaseFragment<FragmentCoursesBinding,CoursesViewmodel>() 
             rvcourses.adapter=adaptercourses
             rvcourses.show()
         }
+        binding.ivProfilenew.setOnClickListener {
+            Log.e("Clicked","Clicked"+"Clicked")
+
+        }
         binding.rvcourses.setOnClickListener {
 
             Log.e("Clicked","Clicked"+"Clicked")
-            val action=CoursesFragmentDirections.actionCoursefragmentToCoursesdetailsfragment()
+            val action=CourseFragmentDirections.actionCoursefragmentToCoursesdetailsnewfragment()
             superNavigate(action)
         }
     }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="15dp"
+    android:translationZ="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/layback"
+            android:background="@drawable/activity_item_background"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/instagram_icon"
+            app:layout_constraintTop_toTopOf="@+id/layback"
+            app:layout_constraintBottom_toBottomOf="@+id/layback"
+            app:layout_constraintStart_toStartOf="@+id/layback"
+            app:layout_constraintEnd_toEndOf="@+id/layback"
+            android:padding="0dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layback"
+            app:layout_constraintStart_toStartOf="@+id/layback"
+            app:layout_constraintEnd_toEndOf="@+id/layback"
+            android:text="@string/share_instagram"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunitoregular"
+            android:textSize="10dp"
+            android:id="@+id/tvbrand"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvbrand"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="1000"
+            android:textColor="@color/keycolor"
+            android:fontFamily="@font/nunitoregular"
+            android:textSize="8dp"
+            android:layout_marginVertical="3dp"
+            android:drawableEnd="@drawable/key_point"
+            android:drawablePadding="3dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

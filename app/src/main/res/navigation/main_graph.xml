@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/coursesdetailsfragment"
+    app:startDestination="@id/splashfragment"
     android:id="@+id/main_graph">
 <fragment
     android:id="@+id/splashfragment"
@@ -146,6 +146,18 @@
         android:label="home_fragment"
         tools:layout="@layout/fragment_home_frament"
         >
+        <action
+            android:id="@+id/action_homefragment_to_prfilefragment"
+            app:destination="@id/profilefragment"
+            app:popUpTo="@id/homefragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homefragment_to_coursesdetailsnewFragment"
+            app:destination="@id/coursedetailnewFragment"
+            app:popUpTo="@id/homefragment"
+            app:popUpToInclusive="false"
+            />
+
     </fragment>
 
 
@@ -157,8 +169,8 @@
         >
 
         <action
-            android:id="@+id/action_coursefragment_to_coursesdetailsfragment"
-            app:destination="@id/coursesdetailsfragment"
+            android:id="@+id/action_coursesfragment_to_coursesdetailsnewfragment"
+            app:destination="@id/coursedetailnewFragment"
             app:popUpTo="@id/coursesfragment"
             app:popUpToInclusive="false" />
     </fragment>
@@ -192,12 +204,12 @@
     <fragment
         android:id="@+id/coursefragment"
         android:name="com.example.whyhmm.presentation.fragment.CourseFragment"
-        android:label="supportcsndc_fragment"
+        android:label="course_fragment"
         tools:layout="@layout/fragment_course"
         >
         <action
-            android:id="@+id/action_coursefragment_to_coursesdetailsfragment"
-            app:destination="@id/coursesdetailsfragment"
+            android:id="@+id/action_coursefragment_to_coursesdetailsnewfragment"
+            app:destination="@id/coursedetailnewFragment"
             app:popUpTo="@id/coursefragment"
             app:popUpToInclusive="false" />
     </fragment>
@@ -207,5 +219,28 @@
         android:name="com.example.whyhmm.presentation.fragment.CourseDetailedFragment"
         android:label="cousesdetailed_fragment"
         tools:layout="@layout/fragment_course_detailed"
+        />
+
+
+    <fragment
+        android:id="@+id/profilefragment"
+        android:name="com.example.whyhmm.presentation.fragment.ProfileFragment"
+        android:label="cousesdetailed_fragment"
+        tools:layout="@layout/fragment_profile"
+        />
+
+
+    <fragment
+        android:id="@+id/gamesactivityFragment"
+        android:name="com.example.whyhmm.presentation.fragment.GameActivityFragment"
+        android:label="cousesdetailed_fragment"
+        tools:layout="@layout/fragment_game_activity"
+        />
+
+    <fragment
+        android:id="@+id/coursedetailnewFragment"
+        android:name="com.example.whyhmm.presentation.fragment.CourseNewDetailFragment"
+        android:label="cousesdetailed_fragment"
+        tools:layout="@layout/fragment_course_new_detail"
         />
 </navigation>

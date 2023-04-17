@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="15dp"
+    android:translationZ="5dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:src="@drawable/profile_sample"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/ivprofile"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ivprofile"
+        app:layout_constraintStart_toEndOf="@+id/ivprofile"
+        android:layout_marginStart="10dp"
+        android:text="Dev"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitosemibold"
+        android:textSize="15dp"
+        android:id="@+id/tvname"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivprofile"
+        app:layout_constraintStart_toEndOf="@+id/ivprofile"
+        android:layout_marginStart="10dp"
+        android:text="@string/june_23_4_45_pm"
+        android:textSize="10dp"
+        android:fontFamily="@font/nunitoregular"
+        android:textColor="@color/suggsetiontextcolor"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/ivprofile"
+        app:layout_constraintBottom_toBottomOf="@+id/ivprofile"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        android:text="$ 200"
+        android:textColor="@color/redcolor"
+        android:fontFamily="@font/nunitobold"
+        android:textSize="15dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

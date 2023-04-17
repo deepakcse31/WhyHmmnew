@@ -54,7 +54,7 @@ class CourseFragment : BaseFragment<FragmentCourseBinding,CourseViewmodel>() {
         }
         binding.tvpopular.setOnClickListener {
             Log.e("Clicked","Clicked"+"Clicked")
-            val action=CourseFragmentDirections.actionCoursefragmentToCoursesdetailsfragment()
+            val action=HomeFramentDirections.actionHomefragmentToCoursesdetailsnewFragment()
             superNavigate(action)
         }
     }

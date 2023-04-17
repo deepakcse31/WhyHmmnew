@@ -12,7 +12,7 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/course_icon"/>
 
-    <item android:id="@+id/activityfragment"
+    <item android:id="@+id/gamesactivityFragment"
         android:title="Activity"
         app:showAsAction="ifRoom"
         android:icon="@drawable/activity_icon"/>

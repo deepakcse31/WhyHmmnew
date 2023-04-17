@@ -7,6 +7,7 @@ import com.example.whyhmm.R
 import com.example.whyhmm.databinding.FragmentHomeFramentBinding
 import com.example.whyhmm.domain.adapter.AutoScrollAdapter
 import com.example.whyhmm.domain.adapter.PreviewAdapter
+import com.example.whyhmm.domain.utils.superNavigate
 import com.example.whyhmm.presentation.fragment.basefragment.BaseFragment
 import com.example.whyhmm.presentation.fragment.viewmodel.HomeViewmodel
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,6 +38,10 @@ class HomeFrament : BaseFragment<FragmentHomeFramentBinding,HomeViewmodel>() {
             postsTabs.setupWithViewPager(binding.postTabsViewPager)
             postTabsViewPager.adapter=adapt
             postTabsViewPager.offscreenPageLimit=4
+            ivProfilenew.setOnClickListener {
+                val action=HomeFramentDirections.actionHomefragmentToPrfilefragment()
+                superNavigate(action)
+            }
         }
     }
 }

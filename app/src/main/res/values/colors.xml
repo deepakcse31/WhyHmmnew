@@ -91,8 +91,13 @@
     <color name="splash">#FFFF00</color>
     <color name="secondarycolor">#00B2E9</color>
     <color name="suggsetiontextcolor">#999999</color>
-
+    <color name="tagstextcolor">#0A5166</color>
+    <color name="learntextcolor">#666666</color>
+    <color name="seriescolor">#3D2222</color>
+<color name="linkcololr">#3491DB</color>
     <color name="redcolor">#D73737</color>
     <color name="buttoninactive">#ECF0F3</color>
     <color name="linecolor">#ECF0F3</color>
+    <color name="keycolor">#DDBA28</color>
+    <color name="activity_color">#E7B389</color>
 </resources>

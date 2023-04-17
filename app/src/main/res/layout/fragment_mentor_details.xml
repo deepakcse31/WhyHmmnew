@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.MentorDetailsFragment">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/ivprofile"
+        android:src="@drawable/mentor_dummy"
+        android:layout_marginStart="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ivprofile"
+        app:layout_constraintStart_toEndOf="@+id/ivprofile"
+        android:text="Ajjet Kumar"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tvname"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvname"
+        app:layout_constraintStart_toStartOf="@+id/tvname"
+        android:textColor="@color/suggsetiontextcolor"
+        android:text="@string/popolar_in_marketing"
+        android:textSize="14dp"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvproduct"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvhashtag"
+        app:layout_constraintTop_toBottomOf="@+id/tvproduct"
+        app:layout_constraintStart_toStartOf="@+id/tvproduct"
+        android:layout_marginTop="5dp"
+        android:text="#Instagram"
+        android:fontFamily="@font/nunitoregular"
+        android:textSize="14dp"
+        android:textColor="@color/suggsetiontextcolor"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@+id/ivprofile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/layprodiledata"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.3"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="112"
+                android:textSize="15dp"
+                android:fontFamily="@font/nunitosemibold"
+                android:id="@+id/tvfollowers"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitoregular"
+                android:text="followers"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.3"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="112"
+                android:textSize="15dp"
+                android:fontFamily="@font/nunitosemibold"
+
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitoregular"
+                android:text="followers"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.3"
+            android:gravity="center"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                style="@style/loginbutton"
+                android:layout_marginHorizontal="0dp"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"
+                android:text="Follow"
+                android:textColor="@color/white"
+                android:background="@drawable/button_gradient"
+                android:id="@+id/btnsubmit"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layprodiledata"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/nunitobold"
+        android:text="@string/about"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginVertical="15dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

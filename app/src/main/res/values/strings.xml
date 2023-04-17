@@ -30,4 +30,15 @@
     <string name="marketing_is_a_fast_evolving_industry_to_keep_up_you_need_to_know_the_latest_terms_and_definitions_thats_why_we_ve_put_together_a_read_more">Marketing is a fast-evolving industry.to keep up, you need to know the latest terms and definitions. Thats why we’ve put together a....... Read More</string>
     <string name="your_mentors"><u>Your mentors</u></string>
     <string name="my_courses"><u>My Courses</u></string>
+    <string name="what_you_ll_learn">What You’ll learn?</string>
+    <string name="last_transactions">last Transactions</string>
+    <string name="view_all">View All</string>
+    <string name="june_23_4_45_pm">June 23, 4:45 pm</string>
+    <string name="about"><u>About</u></string>
+    <string name="your_appointments">Your Appointments</string>
+    <string name="favourite_courses">Favourite Courses</string>
+    <string name="your_transactions">Your Transactions</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="total_rewards_earned">Total Rewards Earned</string>
+    <string name="share_instagram">Share Instagram</string>
 </resources>

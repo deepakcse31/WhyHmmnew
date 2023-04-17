@@ -3,25 +3,29 @@ package com.example.whyhmm.presentation.fragment
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.os.Build
+import android.os.Build.VERSION_CODES.M
 import android.os.Bundle
 import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import at.huber.youtubeExtractor.VideoMeta
 import at.huber.youtubeExtractor.YouTubeExtractor
 import at.huber.youtubeExtractor.YtFile
 import com.example.whyhmm.R
 import com.example.whyhmm.databinding.FragmentCourseDetailedBinding
+import com.example.whyhmm.domain.adapter.*
 import com.example.whyhmm.domain.utils.generateQualityList
+import com.example.whyhmm.domain.utils.show
 import com.example.whyhmm.presentation.fragment.basefragment.BaseFragment
 import com.example.whyhmm.presentation.fragment.viewmodel.CourseDetailViewmodel
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.TracksInfo
+import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.source.MediaSource
 import com.google.android.exoplayer2.source.MergingMediaSource
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
@@ -30,12 +34,14 @@ import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.trackselection.TrackSelectionOverrides
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 import com.google.android.exoplayer2.util.Util
+import com.google.gson.JsonObject
 import com.norulab.exofullscreen.MediaPlayer.exoPlayer
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
 
 
 @AndroidEntryPoint
-class CourseDetailedFragment : BaseFragment<FragmentCourseDetailedBinding,CourseDetailViewmodel>(),Player.Listener  {
+class CourseDetailedFragment : BaseFragment<FragmentCourseDetailedBinding,CourseDetailViewmodel>() ,Player.Listener  {
     private var qualityPopUp: PopupMenu? = null
     private var player: ExoPlayer? = null
     private var playbackPosition = 0L
@@ -43,12 +49,20 @@ class CourseDetailedFragment : BaseFragment<FragmentCourseDetailedBinding,Course
     private var trackSelector: DefaultTrackSelector? = null
     var qualityList = ArrayList<Pair<String, TrackSelectionOverrides.Builder>>()
     private var playerexo: ExoPlayer? = null
-
-
     var fullscreen = false
+
+    private var adaptertags : TagsAdapter?=null
+
+    private var adapterlearn : LearningAdapter?=null
+
+    private var adaptermarketingepisode : MarketingEpisodeAdapter?=null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      //  window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.black)
+        //  window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.black)
+
+
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
@@ -59,9 +73,40 @@ class CourseDetailedFragment : BaseFragment<FragmentCourseDetailedBinding,Course
             requireActivity().window.statusBarColor = resources.getColor(R.color.black)
         }
         initListener()
+        lifecycleScope.launchWhenStarted {
+            delay(2000)
+            binding.mainLay.visibility=View.VISIBLE
+        }
+        adaptertags= TagsAdapter()
+        adapterlearn=LearningAdapter()
+        adaptermarketingepisode=MarketingEpisodeAdapter()
+        binding.apply {
 
+
+            var gridLayoutManager=
+                GridLayoutManager(requireContext(),2, GridLayoutManager.VERTICAL,false)
+            //  gridLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+            rvtags.layoutManager= gridLayoutManager
+            rvtags.adapter=adaptertags
+            rvtags.show()
+
+
+            rvlearn.layoutManager= LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
+            rvlearn.adapter=adapterlearn
+            rvlearn.show()
+
+
+
+            rvmarketing.layoutManager= LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
+            rvmarketing.adapter=adaptermarketingepisode
+            rvmarketing.show()
+        }
     }
-
+    private fun Apicall(number: String) {
+        val payerReg = JsonObject()
+        payerReg.addProperty("mobile_number", number)
+       // viewModel. login(payerReg)
+    }
 
     private fun initListener() {
         binding.apply {
@@ -140,8 +185,6 @@ class CourseDetailedFragment : BaseFragment<FragmentCourseDetailedBinding,Course
         player?.playWhenReady = false
         player?.addListener(this)
         player?.prepare()
-        if (playWhenReady?.)
-        binding.mainLay.visibility=View.VISIBLE
         binding.playerExo.setControllerVisibilityListener {
             if (it == View.VISIBLE) {
                 binding.ivexpand.visibility = View.VISIBLE
